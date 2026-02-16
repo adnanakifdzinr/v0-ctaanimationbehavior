@@ -125,7 +125,7 @@ export function SiteHeader() {
               }}
               onHoverStart={() => setIsCtaHovering(true)}
               onHoverEnd={() => setIsCtaHovering(false)}
-              className="h-[44px] bg-transparent border-l-2 border-r-2 border-white rounded-full flex items-center justify-center px-2 py-2 gap-2 overflow-hidden hover:bg-[#ff3a09]/5 cursor-pointer focus:outline-none relative"
+              className="h-[44px] bg-transparent border-l-2 border-r-2 border-white rounded-full flex items-center justify-center px-2 py-2 gap-2 overflow-hidden hover:bg-[#ff3a09]/10 cursor-pointer focus:outline-none relative"
             >
               <motion.span
                 initial={{ opacity: 0 }}
