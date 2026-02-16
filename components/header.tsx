@@ -270,7 +270,7 @@ export function SiteHeader() {
                         setIsMenuOpen(false)
                         setIsAboutOpen(true)
                       }}
-                      className={`block text-[50px] md:text-[89px] lg:text-[101px] tracking-tight font-regular leading-[0.95] transition-colors duration-100 ease-in-out cursor-pointer text-white/50 hover:text-white`}
+                      className={`block text-[50px] md:text-[89px] lg:text-[101px] tracking-tight font-regular leading-[0.95] transition-colors duration-100 ease-in-out cursor-pointer text-[#ff3a09] hover:text-white`}
                       style={{
                         transform: isMenuOpen ? "translateY(0)" : "translateY(120%)",
                         opacity: isMenuOpen ? 1 : 0,
