@@ -167,7 +167,7 @@ export function SiteHeader() {
               </motion.span>
 
               <motion.div
-                className="w-9 h-9 rounded-full bg-white flex items-center justify-center overflow-hidden relative flex-shrink-0"
+                className="w-9 h-9 rounded-full bg-[#ff3a09] flex items-center justify-center overflow-hidden relative flex-shrink-0"
                 initial={{ boxShadow: '0 0 0px rgba(255, 255, 255, 0)' }}
                 animate={isWebOpenAnimating ? {
                   boxShadow: [
@@ -191,7 +191,7 @@ export function SiteHeader() {
                   transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                   className="absolute"
                 >
-                  <ArrowRight className="w-6 h-6 text-black" strokeWidth={2} />
+                  <ArrowRight className="w-6 h-6 text-white" strokeWidth={2} />
                 </motion.div>
 
                 <motion.div
