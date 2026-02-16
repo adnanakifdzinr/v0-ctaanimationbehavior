@@ -28,7 +28,7 @@ export function AboutPopup({ isOpen, onClose }: AboutPopupProps) {
       onClick={handleClose}
     >
       <div
-        className={`bg-[#1A1A1A] w-full max-w-3xl rounded-2xl overflow-hidden transition-all duration-500 ease-out transform ${isClosing
+        className={`bg-[#0e0e0e] w-full max-w-3xl rounded-2xl overflow-hidden transition-all duration-500 ease-out transform ${isClosing
           ? "scale-90 opacity-0"
           : "scale-100 opacity-100 animate-bounce"
           }`}

@@ -98,7 +98,7 @@ export function SiteHeader() {
   return (
     <>
       <motion.header
-        className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-500 ease-out ${scrollY >= 100 || isMenuOpen ? "bg-[#1A1A1A]" : "bg-[#1A1A1A]"
+        className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-500 ease-out ${scrollY >= 100 || isMenuOpen ? "bg-[#0e0e0e]" : "bg-[#0e0e0e]"
           }`}
         initial={{ y: '-100%' }}
         animate={{ y: isWebOpenAnimating ? 0 : '-100%' }}
@@ -125,7 +125,7 @@ export function SiteHeader() {
               }}
               onHoverStart={() => setIsCtaHovering(true)}
               onHoverEnd={() => setIsCtaHovering(false)}
-              className="h-[44px] bg-transparent border-l-2 border-r-2 border-white rounded-full flex items-center justify-center px-2 py-2 gap-2 overflow-hidden hover:bg-white/5 cursor-pointer focus:outline-none relative"
+              className="h-[44px] bg-transparent border-l-2 border-r-2 border-white rounded-full flex items-center justify-center px-2 py-2 gap-2 overflow-hidden hover:bg-white/10 cursor-pointer focus:outline-none relative"
             >
               <motion.span
                 initial={{ opacity: 0 }}
@@ -166,8 +166,8 @@ export function SiteHeader() {
                 ))}
               </motion.span>
 
-              <motion.div 
-                className="w-9 h-9 rounded-full bg-white flex items-center justify-center overflow-hidden relative flex-shrink-0"
+              <motion.div
+                className="w-9 h-9 rounded-full bg-[#ff3a09] flex items-center justify-center overflow-hidden relative flex-shrink-0"
                 initial={{ boxShadow: '0 0 0px rgba(255, 255, 255, 0)' }}
                 animate={isWebOpenAnimating ? {
                   boxShadow: [
@@ -191,7 +191,7 @@ export function SiteHeader() {
                   transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                   className="absolute"
                 >
-                  <ArrowRight className="w-6 h-6 text-black" strokeWidth={2} />
+                  <ArrowRight className="w-6 h-6 text-white" strokeWidth={2} />
                 </motion.div>
 
                 <motion.div
@@ -203,7 +203,7 @@ export function SiteHeader() {
                   transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                   className="absolute"
                 >
-                  <ArrowRight className="w-6 h-6 text-black" strokeWidth={2} />
+                  <ArrowRight className="w-6 h-6 text-white" strokeWidth={2} />
                 </motion.div>
               </motion.div>
             </motion.button>
@@ -248,7 +248,7 @@ export function SiteHeader() {
           {[0, 1, 2, 3, 4].map((i) => (
             <div
               key={i}
-              className={`flex-1 bg-[#1A1A1A] transition-transform ease-[cubic-bezier(0.76,0,0.24,1)] ${isMenuOpen ? "scale-y-100 origin-bottom" : "scale-y-0 origin-top"}`}
+              className={`flex-1 bg-[#0e0e0e] transition-transform ease-[cubic-bezier(0.76,0,0.24,1)] ${isMenuOpen ? "scale-y-100 origin-bottom" : "scale-y-0 origin-top"}`}
               style={{
                 transitionDuration: "1500ms",
                 transitionDelay: isMenuOpen ? `${i * 50}ms` : `${(4 - i) * 30}ms`,
@@ -270,7 +270,7 @@ export function SiteHeader() {
                         setIsMenuOpen(false)
                         setIsAboutOpen(true)
                       }}
-                      className={`block text-[50px] md:text-[89px] lg:text-[101px] tracking-tight font-regular leading-[0.95] transition-colors duration-100 ease-in-out cursor-pointer text-white/50 hover:text-white`}
+                      className={`block text-[50px] md:text-[89px] lg:text-[101px] tracking-tight font-regular leading-[0.95] transition-colors duration-100 ease-in-out cursor-pointer text-white hover:text-[#ff3a09]`}
                       style={{
                         transform: isMenuOpen ? "translateY(0)" : "translateY(120%)",
                         opacity: isMenuOpen ? 1 : 0,
@@ -287,7 +287,7 @@ export function SiteHeader() {
                         setIsMenuOpen(false)
                         setIsContactOpen(true)
                       }}
-                      className={`block text-[50px] md:text-[89px] lg:text-[101px] tracking-tight font-regular leading-[0.95] transition-colors duration-100 ease-in-out cursor-pointer text-white/50 hover:text-white`}
+                      className={`block text-[50px] md:text-[89px] lg:text-[101px] tracking-tight font-regular leading-[0.95] transition-colors duration-100 ease-in-out cursor-pointer text-white hover:text-[#ff3a09]`}
                       style={{
                         transform: isMenuOpen ? "translateY(0)" : "translateY(120%)",
                         opacity: isMenuOpen ? 1 : 0,
@@ -307,7 +307,7 @@ export function SiteHeader() {
                           element.scrollIntoView({ behavior: "smooth" })
                         }
                       }}
-                      className={`block text-[50px] md:text-[89px] lg:text-[101px] tracking-tight font-regular leading-[0.95] transition-colors duration-100 ease-in-out cursor-pointer text-white/50 hover:text-white`}
+                      className={`block text-[50px] md:text-[89px] lg:text-[101px] tracking-tight font-regular leading-[0.95] transition-colors duration-100 ease-in-out cursor-pointer text-white hover:text-[#ff3a09]`}
                       style={{
                         transform: isMenuOpen ? "translateY(0)" : "translateY(120%)",
                         opacity: isMenuOpen ? 1 : 0,
@@ -321,7 +321,7 @@ export function SiteHeader() {
                   ) : (
                     <Link
                       href={link.href}
-                      className={`block text-[50px] md:text-[89px] lg:text-[101px] tracking-tight font-regular leading-[0.95] transition-colors duration-100 ease-in-out ${isActive(link.href) ? "text-white" : "text-white/50 hover:text-white"}`}
+                      className={`block text-[50px] md:text-[89px] lg:text-[101px] tracking-tight font-regular leading-[0.95] transition-colors duration-100 ease-in-out ${isActive(link.href) ? "text-white" : "text-white hover:text-[#ff3a09]"}`}
                       style={{
                         transform: isMenuOpen ? "translateY(0)" : "translateY(120%)",
                         opacity: isMenuOpen ? 1 : 0,
@@ -352,7 +352,7 @@ export function SiteHeader() {
                 href="https://www.instagram.com/adnanahmedakif/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 md:gap-3 text-white text-[12px] md:text-[14px] font-medium tracking-tight hover:opacity-80 transition-opacity"
+                className="flex items-center gap-2 md:gap-3 text-white text-[12px] md:text-[14px] font-medium tracking-tight hover:text-[#ff3a09] transition-opacity"
               >
                 Instagram
                 <div className="w-5 h-5 md:w-6 md:h-6 rounded-full bg-white flex items-center justify-center flex-shrink-0">
@@ -363,18 +363,18 @@ export function SiteHeader() {
                 href="https://www.facebook.com/adnanahakif"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 md:gap-3 text-white text-[12px] md:text-[14px] font-medium tracking-tight hover:opacity-80 transition-opacity"
+                className="flex items-center gap-2 md:gap-3 text-white text-[12px] md:text-[14px] font-medium tracking-tight hover:text-[#ff3a09]  transition-opacity"
               >
                 Facebook
                 <div className="w-5 h-5 md:w-6 md:h-6 rounded-full bg-white flex items-center justify-center flex-shrink-0">
-                  <ArrowRight className="w-2.5 h-2.5 md:w-3 md:h-3 text-black -rotate-45" strokeWidth={2.5} />
+                  <ArrowRight className="w-2.5 h-2.5 md:w-3 md:h-3 text-black -rotate-45 group-hover:text-[#ff3a09]" strokeWidth={2.5} />
                 </div>
               </a>
               <a
                 href="https://www.youtube.com/@adnanahmedakif"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 md:gap-3 text-white text-[12px] md:text-[14px] font-medium tracking-tight hover:opacity-80 transition-opacity"
+                className="flex items-center gap-2 md:gap-3 text-white text-[12px] md:text-[14px] font-medium tracking-tight hover:text-[#ff3a09] transition-opacity"
               >
                 YouTube
                 <div className="w-5 h-5 md:w-6 md:h-6 rounded-full bg-white flex items-center justify-center flex-shrink-0">

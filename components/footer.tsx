@@ -126,7 +126,7 @@ export function Footer() {
 
   return (
     <>
-      <footer id="contact" className="bg-[#1A1A1A] text-white transition-colors duration-300">
+      <footer id="contact" className="bg-[#ff3a09] text-white transition-colors duration-300">
         {/* Divider */}
         <div className="w-full h-px bg-white/10" />
 
@@ -152,7 +152,7 @@ export function Footer() {
                   onMouseLeave={() => setHoveredCta(null)}
                 >
                   <motion.div
-                    className="flex items-center gap-12 bg-transparent border-l-2 border-r-2 border-white text-white px-1.5 py-2 font-medium text-[16px] rounded-full hover:bg-white/5 transition-colors overflow-hidden"
+                    className="flex items-center gap-12 bg-transparent border-b border-white text-white px-1.5 py-2 font-medium text-[16px] rounded-full hover:bg-white/5 transition-colors overflow-hidden"
                     initial={{ width: 'auto' }}
                     animate={{ width: 'auto' }}
                     transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94], delay: 0 }}
@@ -177,7 +177,7 @@ export function Footer() {
                         transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
                         className="absolute"
                       >
-                        <ArrowRight className="w-6 h-6 text-black" strokeWidth={2} />
+                        <ArrowRight className="w-6 h-6 text-[#ff3a09]" strokeWidth={2} />
                       </motion.div>
                       <motion.div
                         animate={{
@@ -187,7 +187,7 @@ export function Footer() {
                         transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
                         className="absolute"
                       >
-                        <ArrowRight className="w-6 h-6 text-black" strokeWidth={2} />
+                        <ArrowRight className="w-6 h-6 text-[#ff3a09]" strokeWidth={2} />
                       </motion.div>
                     </motion.div>
                   </motion.div>
@@ -199,7 +199,7 @@ export function Footer() {
                   onMouseLeave={() => setHoveredCta(null)}
                 >
                   <motion.div
-                    className="flex items-center gap-2 bg-transparent border-l-2 border-r-2 border-white text-white px-1.5 py-2 font-medium text-[16px] rounded-full hover:bg-white/5 transition-colors overflow-hidden"
+                    className="flex items-center gap-2 bg-transparent border-t border-white text-white px-1.5 py-2 font-medium text-[16px] rounded-full hover:bg-white/5 transition-colors overflow-hidden"
                     initial={{ width: 'auto' }}
                     animate={{ width: 'auto' }}
                     transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94], delay: 0.1 }}
@@ -224,7 +224,7 @@ export function Footer() {
                         transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
                         className="absolute"
                       >
-                        <ArrowRight className="w-6 h-6 text-black" strokeWidth={2} />
+                        <ArrowRight className="w-6 h-6 text-[#ff3a09]" strokeWidth={2} />
                       </motion.div>
                       <motion.div
                         animate={{
@@ -234,7 +234,7 @@ export function Footer() {
                         transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
                         className="absolute"
                       >
-                        <ArrowRight className="w-6 h-6 text-black" strokeWidth={2} />
+                        <ArrowRight className="w-6 h-6 text-[#ff3a09]" strokeWidth={2} />
                       </motion.div>
                     </motion.div>
                   </motion.div>
@@ -267,7 +267,7 @@ export function Footer() {
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full h-auto bg-transparent text-white border-0 border-b border-white/30 rounded-none focus-visible:ring-0 focus-visible:border-white placeholder-white/20 py-2 focus-visible:bg-transparent"
+                    className="w-full h-auto bg-transparent text-white border-0 border-b border-white rounded-none focus-visible:ring-0 focus-visible:border-white placeholder-white py-2 focus-visible:bg-transparent"
                   />
                   <Input
                     type="email"
@@ -276,7 +276,7 @@ export function Footer() {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full h-auto bg-transparent text-white border-0 border-b border-white/30 rounded-none focus-visible:ring-0 focus-visible:border-white placeholder-white/20 py-2 focus-visible:bg-transparent"
+                    className="w-full h-auto bg-transparent text-white border-0 border-b border-white rounded-none focus-visible:ring-0 focus-visible:border-white placeholder-white py-2 focus-visible:bg-transparent"
                   />
                 </div>
 
@@ -288,7 +288,7 @@ export function Footer() {
                     placeholder="Location"
                     value={formData.location}
                     onChange={handleInputChange}
-                    className="w-full h-auto bg-transparent text-white border-0 border-b border-white/30 rounded-none focus-visible:ring-0 focus-visible:border-white placeholder-white/20 py-2 focus-visible:bg-transparent"
+                    className="w-full h-auto bg-transparent text-white border-0 border-b border-white rounded-none focus-visible:ring-0 focus-visible:border-white placeholder-white py-2 focus-visible:bg-transparent"
                   />
                   <Input
                     type="text"
@@ -296,7 +296,7 @@ export function Footer() {
                     placeholder="Company Name"
                     value={formData.company}
                     onChange={handleInputChange}
-                    className="w-full h-auto bg-transparent text-white border-0 border-b border-white/30 rounded-none focus-visible:ring-0 focus-visible:border-white placeholder-white/20 py-2 focus-visible:bg-transparent"
+                    className="w-full h-auto bg-transparent text-white border-0 border-b border-white rounded-none focus-visible:ring-0 focus-visible:border-white placeholder-white py-2 focus-visible:bg-transparent"
                   />
                 </div>
 
@@ -342,7 +342,7 @@ export function Footer() {
                     value={formData.message}
                     onChange={handleInputChange}
                     required
-                    className="w-full h-20 text-white border-0 border-b border-white/30 rounded-none focus-visible:ring-0 focus-visible:border-white placeholder-white/20 py-2 focus-visible:bg-transparent resize-none"
+                    className="w-full h-20 text-white border-0 border-b border-white rounded-none focus-visible:ring-0 focus-visible:border-white placeholder-white py-2 focus-visible:bg-transparent resize-none"
                     placeholder="Your message..."
                   />
                 </div>
@@ -350,7 +350,7 @@ export function Footer() {
                 {/* Submit Button */}
                 <Button
                   type="submit"
-                  className="w-full bg-transparent text-white font-medium py-4 text-base md:text-lg border-0 border-b border-white rounded-none hover:bg-white/5 transition-colors"
+                  className="w-full bg-transparent text-white font-medium py-4 text-base md:text-lg border-0 border-b border-white rounded-none hover:bg-transparent"
                 >
                   Submit Message
                 </Button>

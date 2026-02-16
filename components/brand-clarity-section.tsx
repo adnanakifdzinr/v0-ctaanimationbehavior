@@ -60,7 +60,7 @@ export function BrandClaritySection() {
   }, [])
 
   return (
-    <section className="w-full bg-[#1A1A1A] py-12 md:py-20 lg:py-24">
+    <section className="w-full bg-[#0E0E0E] py-12 md:py-20 lg:py-24">
       <div className="mx-auto max-w-full px-4 sm:px-6 lg:px-8">
         {/* Top Text Section - Gradient reveal effect */}
         <HeadingAnimation className="mb-12 md:mb-16 lg:mb-10">
@@ -122,7 +122,7 @@ export function BrandClaritySection() {
                     ease: 'easeInOut'
                   }}
                   style={{ willChange: 'width' }}
-                  className="h-[44px] bg-transparent border-l-2 border-r-2 border-white rounded-full flex items-center justify-center px-2 py-2 gap-2 overflow-hidden hover:bg-white/5 cursor-pointer focus:outline-none relative w-full sm:w-auto"
+                  className="h-[44px] bg-transparent border-l-2 border-r-2 border-white rounded-full flex items-center justify-center px-2 py-2 gap-2 overflow-hidden hover:bg-white/10 cursor-pointer focus:outline-none relative w-full sm:w-auto"
                 >
                   <motion.span
                     initial={{ opacity: 0 }}
@@ -132,7 +132,7 @@ export function BrandClaritySection() {
                   >
                     Our Prices
                   </motion.span>
-                  <div className="w-9 h-9 rounded-full bg-white flex items-center justify-center overflow-hidden relative flex-shrink-0">
+                  <div className="w-9 h-9 rounded-full bg-[#ff3a09] flex items-center justify-center overflow-hidden relative flex-shrink-0">
                     <motion.div
                       animate={{
                         x: hoveredCta === 'pricing' ? 32 : 0,
@@ -141,7 +141,7 @@ export function BrandClaritySection() {
                       transition={{ duration: 0.4, ease: 'easeInOut' }}
                       className="absolute"
                     >
-                      <ArrowRight className="w-5 h-5 text-black" strokeWidth={2.5} />
+                      <ArrowRight className="w-5 h-5 text-white" strokeWidth={2.5} />
                     </motion.div>
                     <motion.div
                       animate={{
@@ -151,7 +151,7 @@ export function BrandClaritySection() {
                       transition={{ duration: 0.4, ease: 'easeInOut' }}
                       className="absolute"
                     >
-                      <ArrowRight className="w-5 h-5 text-black" strokeWidth={2.5} />
+                      <ArrowRight className="w-5 h-5 text-white" strokeWidth={2.5} />
                     </motion.div>
                   </div>
                 </motion.button>
