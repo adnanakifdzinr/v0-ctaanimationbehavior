@@ -132,7 +132,7 @@ export function BrandClaritySection() {
                   >
                     Our Prices
                   </motion.span>
-                  <div className="w-9 h-9 rounded-full bg-white flex items-center justify-center overflow-hidden relative flex-shrink-0">
+                  <div className="w-9 h-9 rounded-full bg-[#ff3a09] flex items-center justify-center overflow-hidden relative flex-shrink-0">
                     <motion.div
                       animate={{
                         x: hoveredCta === 'pricing' ? 32 : 0,
@@ -141,7 +141,7 @@ export function BrandClaritySection() {
                       transition={{ duration: 0.4, ease: 'easeInOut' }}
                       className="absolute"
                     >
-                      <ArrowRight className="w-5 h-5 text-black" strokeWidth={2.5} />
+                      <ArrowRight className="w-5 h-5 text-white" strokeWidth={2.5} />
                     </motion.div>
                     <motion.div
                       animate={{
@@ -151,7 +151,7 @@ export function BrandClaritySection() {
                       transition={{ duration: 0.4, ease: 'easeInOut' }}
                       className="absolute"
                     >
-                      <ArrowRight className="w-5 h-5 text-black" strokeWidth={2.5} />
+                      <ArrowRight className="w-5 h-5 text-white" strokeWidth={2.5} />
                     </motion.div>
                   </div>
                 </motion.button>
