@@ -177,7 +177,7 @@ export function Footer() {
                         transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
                         className="absolute"
                       >
-                        <ArrowRight className="w-6 h-6 text-black" strokeWidth={2} />
+                        <ArrowRight className="w-6 h-6 text-[#ff3a09]" strokeWidth={2} />
                       </motion.div>
                       <motion.div
                         animate={{
@@ -187,7 +187,7 @@ export function Footer() {
                         transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
                         className="absolute"
                       >
-                        <ArrowRight className="w-6 h-6 text-black" strokeWidth={2} />
+                        <ArrowRight className="w-6 h-6 text-[#ff3a09]" strokeWidth={2} />
                       </motion.div>
                     </motion.div>
                   </motion.div>
