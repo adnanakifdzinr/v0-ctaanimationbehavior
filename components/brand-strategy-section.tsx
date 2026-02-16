@@ -26,7 +26,7 @@ export function BrandStrategySection() {
   }, [])
 
   return (
-    <section className="w-full bg-[#1A1A1A] transition-colors duration-300 py-16 md:py-24 lg:py-32 px-3 md:px-5 lg:px-8">
+    <section className="w-full bg-[#0E0E0E] transition-colors duration-300 py-16 md:py-24 lg:py-32 px-3 md:px-5 lg:px-8">
       <div className="max-w-full mx-auto">
         {/* Top Text Section */}
         <HeadingAnimation className="mb-12 md:mb-16 lg:mb-20">
