@@ -267,7 +267,7 @@ export function Footer() {
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full h-auto bg-transparent text-white border-0 border-b border-white/30 rounded-none focus-visible:ring-0 focus-visible:border-white placeholder-white/20 py-2 focus-visible:bg-transparent"
+                    className="w-full h-auto bg-transparent text-white border-0 border-b border-white/30 rounded-none focus-visible:ring-0 focus-visible:border-white placeholder-white py-2 focus-visible:bg-transparent"
                   />
                   <Input
                     type="email"
@@ -276,7 +276,7 @@ export function Footer() {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full h-auto bg-transparent text-white border-0 border-b border-white/30 rounded-none focus-visible:ring-0 focus-visible:border-white placeholder-white/20 py-2 focus-visible:bg-transparent"
+                    className="w-full h-auto bg-transparent text-white border-0 border-b border-white/30 rounded-none focus-visible:ring-0 focus-visible:border-white placeholder-white py-2 focus-visible:bg-transparent"
                   />
                 </div>
 
@@ -288,7 +288,7 @@ export function Footer() {
                     placeholder="Location"
                     value={formData.location}
                     onChange={handleInputChange}
-                    className="w-full h-auto bg-transparent text-white border-0 border-b border-white/30 rounded-none focus-visible:ring-0 focus-visible:border-white placeholder-white/20 py-2 focus-visible:bg-transparent"
+                    className="w-full h-auto bg-transparent text-white border-0 border-b border-white/30 rounded-none focus-visible:ring-0 focus-visible:border-white placeholder-white py-2 focus-visible:bg-transparent"
                   />
                   <Input
                     type="text"
@@ -296,7 +296,7 @@ export function Footer() {
                     placeholder="Company Name"
                     value={formData.company}
                     onChange={handleInputChange}
-                    className="w-full h-auto bg-transparent text-white border-0 border-b border-white/30 rounded-none focus-visible:ring-0 focus-visible:border-white placeholder-white/20 py-2 focus-visible:bg-transparent"
+                    className="w-full h-auto bg-transparent text-white border-0 border-b border-white/30 rounded-none focus-visible:ring-0 focus-visible:border-white placeholder-white py-2 focus-visible:bg-transparent"
                   />
                 </div>
 
@@ -342,7 +342,7 @@ export function Footer() {
                     value={formData.message}
                     onChange={handleInputChange}
                     required
-                    className="w-full h-20 text-white border-0 border-b border-white/30 rounded-none focus-visible:ring-0 focus-visible:border-white placeholder-white/20 py-2 focus-visible:bg-transparent resize-none"
+                    className="w-full h-20 text-white border-0 border-b border-white/30 rounded-none focus-visible:ring-0 focus-visible:border-white placeholder-white py-2 focus-visible:bg-transparent resize-none"
                     placeholder="Your message..."
                   />
                 </div>
