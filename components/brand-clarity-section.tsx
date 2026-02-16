@@ -122,7 +122,7 @@ export function BrandClaritySection() {
                     ease: 'easeInOut'
                   }}
                   style={{ willChange: 'width' }}
-                  className="h-[44px] bg-transparent border-l-2 border-r-2 border-white rounded-full flex items-center justify-center px-2 py-2 gap-2 overflow-hidden hover:bg-white/5 cursor-pointer focus:outline-none relative w-full sm:w-auto"
+                  className="h-[44px] bg-transparent border-l-2 border-r-2 border-white rounded-full flex items-center justify-center px-2 py-2 gap-2 overflow-hidden hover:bg-white/10 cursor-pointer focus:outline-none relative w-full sm:w-auto"
                 >
                   <motion.span
                     initial={{ opacity: 0 }}
