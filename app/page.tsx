@@ -44,7 +44,7 @@ export default function Home() {
   return (
     <>
       <WebOpenAnimation />
-      <main className="relative bg-[#0e0e0e] transition-colors duration-300">
+      <main className="relative bg-[#0E0E0E] transition-colors duration-300">
         {/* Hero SVG Section */}
         <section id="home" className="w-full lg:py-60 lg:px-8 py-30 px-3 overflow-hidden relative">
           <HeroSVGAnimation />
