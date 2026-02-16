@@ -150,7 +150,7 @@ export function WebOpenAnimation() {
             animate="visible"
             exit="exit"
             variants={overlayVariants}
-            className="fixed inset-0 bg-[#ff3a09]"
+            className="fixed inset-0 bg-transparent"
             style={{ zIndex: 9998 }}
           />
 
@@ -160,7 +160,7 @@ export function WebOpenAnimation() {
             animate="visible"
             exit="exit"
             variants={topSliceExit}
-            className="fixed top-0 left-0 right-0 h-1/2 bg-transparent"
+            className="fixed top-0 left-0 right-0 h-1/2 bg-[#ff3a09]"
             style={{ zIndex: 9997 }}
           />
 
