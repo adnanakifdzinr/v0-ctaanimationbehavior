@@ -160,7 +160,7 @@ export function WebOpenAnimation() {
             animate="visible"
             exit="exit"
             variants={topSliceExit}
-            className="fixed top-0 left-0 right-0 h-1/2 bg-[#ff3a09]/50"
+            className="fixed top-0 left-0 right-0 h-1/2 bg-[#ff3a09]"
             style={{ zIndex: 9997 }}
           />
 
@@ -170,7 +170,7 @@ export function WebOpenAnimation() {
             animate="visible"
             exit="exit"
             variants={bottomSliceExit}
-            className="fixed bottom-0 left-0 right-0 h-1/2 bg-[#ff3a09]/50"
+            className="fixed bottom-0 left-0 right-0 h-1/2 bg-[#ff3a09]"
             style={{ zIndex: 9997 }}
           />
 
