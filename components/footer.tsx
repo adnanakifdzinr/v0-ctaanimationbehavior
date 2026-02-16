@@ -152,7 +152,7 @@ export function Footer() {
                   onMouseLeave={() => setHoveredCta(null)}
                 >
                   <motion.div
-                    className="flex items-center gap-12 bg-transparent border-l-2 border-r-2 border-white text-white px-1.5 py-2 font-medium text-[16px] rounded-full hover:bg-white/5 transition-colors overflow-hidden"
+                    className="flex items-center gap-12 bg-transparent border-b border-white text-white px-1.5 py-2 font-medium text-[16px] rounded-full hover:bg-white/5 transition-colors overflow-hidden"
                     initial={{ width: 'auto' }}
                     animate={{ width: 'auto' }}
                     transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94], delay: 0 }}
@@ -199,7 +199,7 @@ export function Footer() {
                   onMouseLeave={() => setHoveredCta(null)}
                 >
                   <motion.div
-                    className="flex items-center gap-2 bg-transparent border-l-2 border-r-2 border-white text-white px-1.5 py-2 font-medium text-[16px] rounded-full hover:bg-white/5 transition-colors overflow-hidden"
+                    className="flex items-center gap-2 bg-transparent border-t border-white text-white px-1.5 py-2 font-medium text-[16px] rounded-full hover:bg-white/5 transition-colors overflow-hidden"
                     initial={{ width: 'auto' }}
                     animate={{ width: 'auto' }}
                     transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94], delay: 0.1 }}
