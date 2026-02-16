@@ -270,7 +270,7 @@ export function SiteHeader() {
                         setIsMenuOpen(false)
                         setIsAboutOpen(true)
                       }}
-                      className={`block text-[50px] md:text-[89px] lg:text-[101px] tracking-tight font-regular leading-[0.95] transition-colors duration-100 ease-in-out cursor-pointer text-[#ff3a09] hover:text-white`}
+                      className={`block text-[50px] md:text-[89px] lg:text-[101px] tracking-tight font-regular leading-[0.95] transition-colors duration-100 ease-in-out cursor-pointer text-white hover:text-[#ff3a09]`}
                       style={{
                         transform: isMenuOpen ? "translateY(0)" : "translateY(120%)",
                         opacity: isMenuOpen ? 1 : 0,
@@ -287,7 +287,7 @@ export function SiteHeader() {
                         setIsMenuOpen(false)
                         setIsContactOpen(true)
                       }}
-                      className={`block text-[50px] md:text-[89px] lg:text-[101px] tracking-tight font-regular leading-[0.95] transition-colors duration-100 ease-in-out cursor-pointer text-[#ff3a09] hover:text-white`}
+                      className={`block text-[50px] md:text-[89px] lg:text-[101px] tracking-tight font-regular leading-[0.95] transition-colors duration-100 ease-in-out cursor-pointer text-white hover:text-[#ff3a09]`}
                       style={{
                         transform: isMenuOpen ? "translateY(0)" : "translateY(120%)",
                         opacity: isMenuOpen ? 1 : 0,
@@ -307,7 +307,7 @@ export function SiteHeader() {
                           element.scrollIntoView({ behavior: "smooth" })
                         }
                       }}
-                      className={`block text-[50px] md:text-[89px] lg:text-[101px] tracking-tight font-regular leading-[0.95] transition-colors duration-100 ease-in-out cursor-pointer text-[#ff3a09] hover:text-white`}
+                      className={`block text-[50px] md:text-[89px] lg:text-[101px] tracking-tight font-regular leading-[0.95] transition-colors duration-100 ease-in-out cursor-pointer text-white hover:text-[#ff3a09]`}
                       style={{
                         transform: isMenuOpen ? "translateY(0)" : "translateY(120%)",
                         opacity: isMenuOpen ? 1 : 0,
@@ -321,7 +321,7 @@ export function SiteHeader() {
                   ) : (
                     <Link
                       href={link.href}
-                      className={`block text-[50px] md:text-[89px] lg:text-[101px] tracking-tight font-regular leading-[0.95] transition-colors duration-100 ease-in-out ${isActive(link.href) ? "text-white" : "text-[#ff3a09] hover:text-white"}`}
+                      className={`block text-[50px] md:text-[89px] lg:text-[101px] tracking-tight font-regular leading-[0.95] transition-colors duration-100 ease-in-out ${isActive(link.href) ? "text-white" : "text-white hover:text-[#ff3a09]"}`}
                       style={{
                         transform: isMenuOpen ? "translateY(0)" : "translateY(120%)",
                         opacity: isMenuOpen ? 1 : 0,
@@ -352,7 +352,7 @@ export function SiteHeader() {
                 href="https://www.instagram.com/adnanahmedakif/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 md:gap-3 text-white text-[12px] md:text-[14px] font-medium tracking-tight hover:bg-[#ff3a09] transition-opacity"
+                className="flex items-center gap-2 md:gap-3 text-white text-[12px] md:text-[14px] font-medium tracking-tight hover:text-[#ff3a09] transition-opacity"
               >
                 Instagram
                 <div className="w-5 h-5 md:w-6 md:h-6 rounded-full bg-white flex items-center justify-center flex-shrink-0">
@@ -363,7 +363,7 @@ export function SiteHeader() {
                 href="https://www.facebook.com/adnanahakif"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 md:gap-3 text-white text-[12px] md:text-[14px] font-medium tracking-tight hover:bg-[#ff3a09] transition-opacity"
+                className="flex items-center gap-2 md:gap-3 text-white text-[12px] md:text-[14px] font-medium tracking-tight hover:text-[#ff3a09] transition-opacity"
               >
                 Facebook
                 <div className="w-5 h-5 md:w-6 md:h-6 rounded-full bg-white flex items-center justify-center flex-shrink-0">
@@ -374,7 +374,7 @@ export function SiteHeader() {
                 href="https://www.youtube.com/@adnanahmedakif"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 md:gap-3 text-white text-[12px] md:text-[14px] font-medium tracking-tight hover:bg-[#ff3a09] transition-opacity"
+                className="flex items-center gap-2 md:gap-3 text-white text-[12px] md:text-[14px] font-medium tracking-tight hover:text-[#ff3a09] transition-opacity"
               >
                 YouTube
                 <div className="w-5 h-5 md:w-6 md:h-6 rounded-full bg-white flex items-center justify-center flex-shrink-0">
