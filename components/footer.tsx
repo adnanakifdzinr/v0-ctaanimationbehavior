@@ -144,7 +144,7 @@ export function Footer() {
               </p>
               <div className="flex flex-col gap-4" ref={ctaContainerRef}>
                 <Link
-                  href="https://wa.me/201615910614"
+                  href="https://wa.me/01615910614"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group inline-block w-fit"
@@ -193,7 +193,7 @@ export function Footer() {
                   </motion.div>
                 </Link>
                 <Link
-                  href="mailto:lozinrcontact@gmail.com"
+                  href="mailto:adnanakif.co@gmail.com"
                   className="group inline-block w-fit"
                   onMouseEnter={() => setHoveredCta('email')}
                   onMouseLeave={() => setHoveredCta(null)}
