@@ -60,7 +60,7 @@ export function BrandClaritySection() {
   }, [])
 
   return (
-    <section className="w-full bg-[#1A1A1A] py-12 md:py-20 lg:py-24">
+    <section className="w-full bg-[#0E0E0E] py-12 md:py-20 lg:py-24">
       <div className="mx-auto max-w-full px-4 sm:px-6 lg:px-8">
         {/* Top Text Section - Gradient reveal effect */}
         <HeadingAnimation className="mb-12 md:mb-16 lg:mb-10">
