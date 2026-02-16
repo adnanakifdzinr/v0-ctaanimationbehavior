@@ -350,7 +350,7 @@ export function Footer() {
                 {/* Submit Button */}
                 <Button
                   type="submit"
-                  className="w-full bg-transparent text-white font-medium py-4 text-base md:text-lg border-0 border-b border-white rounded-none"
+                  className="w-full bg-transparent text-white font-medium py-4 text-base md:text-lg border-0 border-b border-white rounded-none hover:bg-transparent"
                 >
                   Submit Message
                 </Button>
