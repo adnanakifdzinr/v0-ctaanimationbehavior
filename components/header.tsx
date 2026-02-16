@@ -98,7 +98,7 @@ export function SiteHeader() {
   return (
     <>
       <motion.header
-        className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-500 ease-out ${scrollY >= 100 || isMenuOpen ? "bg-[#1A1A1A]" : "bg-[#1A1A1A]"
+        className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-500 ease-out ${scrollY >= 100 || isMenuOpen ? "bg-[#0e0e0e]" : "bg-[#0e0e0e]"
           }`}
         initial={{ y: '-100%' }}
         animate={{ y: isWebOpenAnimating ? 0 : '-100%' }}
@@ -166,7 +166,7 @@ export function SiteHeader() {
                 ))}
               </motion.span>
 
-              <motion.div 
+              <motion.div
                 className="w-9 h-9 rounded-full bg-white flex items-center justify-center overflow-hidden relative flex-shrink-0"
                 initial={{ boxShadow: '0 0 0px rgba(255, 255, 255, 0)' }}
                 animate={isWebOpenAnimating ? {
