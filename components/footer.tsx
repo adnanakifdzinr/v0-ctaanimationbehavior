@@ -126,7 +126,7 @@ export function Footer() {
 
   return (
     <>
-      <footer id="contact" className="bg-[#1A1A1A] text-white transition-colors duration-300">
+      <footer id="contact" className="bg-[#ff3a09] text-white transition-colors duration-300">
         {/* Divider */}
         <div className="w-full h-px bg-white/10" />
 
