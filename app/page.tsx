@@ -44,41 +44,41 @@ export default function Home() {
   return (
     <>
       <WebOpenAnimation />
-      <main className="relative bg-[#1A1A1A] transition-colors duration-300">
-      {/* Hero SVG Section */}
-      <section id="home" className="w-full lg:py-60 lg:px-8 py-30 px-3 overflow-hidden relative">
-        <HeroSVGAnimation />
-        {/* Hero Text Section */}
-        <div className="grid grid-cols-2 gap-0 mt-4 md:mt-5">
-          {/* Left - Empty */}
-          <div></div>
-          {/* Right - Text */}
-          <div className="flex items-center">
-            <TypewriterText
-              text="We create premium brands that command attention."
-              className="text-[20px] md:text-5xl lg:text-[35px] font-regular text-[#F7F7F7] leading-none tracking-tighter"
-            />
+      <main className="relative bg-[#0e0e0e] transition-colors duration-300">
+        {/* Hero SVG Section */}
+        <section id="home" className="w-full lg:py-60 lg:px-8 py-30 px-3 overflow-hidden relative">
+          <HeroSVGAnimation />
+          {/* Hero Text Section */}
+          <div className="grid grid-cols-2 gap-0 mt-4 md:mt-5">
+            {/* Left - Empty */}
+            <div></div>
+            {/* Right - Text */}
+            <div className="flex items-center">
+              <TypewriterText
+                text="We create premium brands that command attention."
+                className="text-[20px] md:text-5xl lg:text-[35px] font-regular text-[#F7F7F7] leading-none tracking-tighter"
+              />
+            </div>
           </div>
+        </section>
+        <Separator className="w-full h-px" />
+        <BrandStrategySection />
+        <Separator className="w-full h-px" />
+        <BrandClaritySection />
+        <Separator className="w-full h-px" />
+        <div className="relative bg-background">
+          <section id="work">
+            <ProjectThumbnails />
+          </section>
+          <Separator className="w-full h-px" />
+          <section id="services">
+            <ServicesSection />
+          </section>
+          <Separator className="w-full h-px" />
+          <WhyChooseUsSection />
+          <Separator className="w-full h-px" />
         </div>
-      </section>
-      <Separator className="w-full h-px" />
-      <BrandStrategySection />
-      <Separator className="w-full h-px" />
-      <BrandClaritySection />
-      <Separator className="w-full h-px" />
-      <div className="relative bg-background">
-        <section id="work">
-          <ProjectThumbnails />
-        </section>
-        <Separator className="w-full h-px" />
-        <section id="services">
-          <ServicesSection />
-        </section>
-        <Separator className="w-full h-px" />
-        <WhyChooseUsSection />
-        <Separator className="w-full h-px" />
-      </div>
-    </main>
+      </main>
     </>
   )
 }
