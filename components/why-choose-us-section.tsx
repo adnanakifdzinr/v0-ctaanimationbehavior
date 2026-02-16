@@ -27,7 +27,7 @@ export function WhyChooseUsSection() {
   ]
 
   return (
-    <section className="w-full bg-[#1a1a1a] py-12 md:py-20 lg:py-24">
+    <section className="w-full bg-[#0e0e0e] py-12 md:py-20 lg:py-24">
       <div className="mx-auto max-w-full px-4 sm:px-6 lg:px-8">
         {/* Top Heading */}
         <HeadingAnimation className="mb-8 md:mb-2">
@@ -48,30 +48,30 @@ export function WhyChooseUsSection() {
           {processes.map((process, index) => (
             <ProcessAnimation key={index}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-start">
-              {/* Left Side - Step Number, Title, Image */}
-              <div className="flex flex-col space-y-6">
-                {/* Step and Title */}
-                <div>
-                  <p className="text-sm md:text-base lg:text-[18px] text-white font-medium mb-2 tracking-tight">
-                    Step {process.step}
+                {/* Left Side - Step Number, Title, Image */}
+                <div className="flex flex-col space-y-6">
+                  {/* Step and Title */}
+                  <div>
+                    <p className="text-sm md:text-base lg:text-[18px] text-white font-medium mb-2 tracking-tight">
+                      Step {process.step}
+                    </p>
+                    <h3 className="text-3xl md:text-4xl lg:text-[40px] text-white font-medium tracking-tight">
+                      {process.title}
+                    </h3>
+                  </div>
+
+                  {/* Image Placeholder for Mobile and Desktop */}
+                  <div className="relative w-full h-80 md:h-96 rounded-lg overflow-hidden">
+                  </div>
+                </div>
+
+                {/* Right Side - Description */}
+                <div className="flex flex-col justify-start mt-25">
+                  <p className="text-base md:text-lg lg:text-[18px] text-gray-300 leading-relaxed">
+                    {process.description}
                   </p>
-                  <h3 className="text-3xl md:text-4xl lg:text-[40px] text-white font-medium tracking-tight">
-                    {process.title}
-                  </h3>
-                </div>
-
-                {/* Image Placeholder for Mobile and Desktop */}
-                <div className="relative w-full h-80 md:h-96 rounded-lg overflow-hidden">
                 </div>
               </div>
-
-              {/* Right Side - Description */}
-              <div className="flex flex-col justify-start mt-25">
-                <p className="text-base md:text-lg lg:text-[18px] text-gray-300 leading-relaxed">
-                  {process.description}
-                </p>
-              </div>
-            </div>
             </ProcessAnimation>
           ))}
         </div>
