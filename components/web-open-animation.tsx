@@ -215,35 +215,43 @@ export function WebOpenAnimation() {
 
               {/* Arrow circle with glow effect */}
               <motion.div
-                className={`${circleSize} rounded-full bg-white flex items-center justify-center overflow-hidden relative flex-shrink-0`}
-                variants={circleVariants}
-                initial="initial"
-                animate={isVisible ? "animate" : "initial"}
+                className="w-9 h-9 rounded-full bg-[#ff3a09] flex items-center justify-center overflow-hidden relative flex-shrink-0"
+                initial={{ boxShadow: '0 0 0px rgba(255, 255, 255, 0)' }}
+                animate={isWebOpenAnimating ? {
+                  boxShadow: [
+                    '0 0 0px rgba(255, 255, 255, 0)',
+                    '0 0 20px rgba(255, 255, 255, 0.4)',
+                    '0 0 0px rgba(255, 255, 255, 0)'
+                  ]
+                } : {}}
+                transition={isWebOpenAnimating ? {
+                  duration: 2.5,
+                  repeat: Infinity,
+                  delay: 1.5
+                } : {}}
               >
-                {/* Main arrow - smooth translate and rotate */}
                 <motion.div
                   animate={{
-                    x: isHovering ? 40 : 0,
-                    opacity: isHovering ? 0 : 1,
-                    rotate: isHovering ? 45 : 0
+                    x: isCtaHovering ? 40 : 0,
+                    opacity: isCtaHovering ? 0 : 1,
+                    rotate: isCtaHovering ? 45 : 0
                   }}
                   transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                   className="absolute"
                 >
-                  <ArrowRight className={`${arrowSize} text-black`} strokeWidth={2} />
+                  <ArrowRight className="w-6 h-6 text-white" strokeWidth={2} />
                 </motion.div>
 
-                {/* Secondary arrow - smooth entrance with rotation */}
                 <motion.div
                   animate={{
-                    x: isHovering ? 0 : -40,
-                    opacity: isHovering ? 1 : 0,
-                    rotate: isHovering ? -45 : 0
+                    x: isCtaHovering ? 0 : -40,
+                    opacity: isCtaHovering ? 1 : 0,
+                    rotate: isCtaHovering ? -45 : 0
                   }}
                   transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                   className="absolute"
                 >
-                  <ArrowRight className={`${arrowSize} text-black`} strokeWidth={2} />
+                  <ArrowRight className="w-6 h-6 text-white" strokeWidth={2} />
                 </motion.div>
               </motion.div>
             </motion.button>
