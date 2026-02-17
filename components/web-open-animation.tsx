@@ -131,23 +131,6 @@ export function WebOpenAnimation() {
     }
   };
 
-  // Circle glow effect
-  const circleVariants = {
-    initial: { boxShadow: '0 0 0px rgba(255, 255, 255, 0)' },
-    animate: {
-      boxShadow: [
-        '0 0 0px rgba(255, 255, 255, 0)',
-        '0 0 20px rgba(255, 255, 255, 0.4)',
-        '0 0 0px rgba(255, 255, 255, 0)'
-      ],
-      transition: {
-        duration: 2.5,
-        repeat: Infinity,
-        delay: 1.2
-      }
-    }
-  };
-
   return (
     <AnimatePresence mode="wait">
       {!isAnimating && (
@@ -220,22 +203,9 @@ export function WebOpenAnimation() {
                 ))}
               </motion.span>
 
-              {/* Arrow circle with glow effect */}
+              {/* Arrow circle */}
               <motion.div
                 className="w-9 h-9 rounded-full bg-[#ff3a09] flex items-center justify-center overflow-hidden relative flex-shrink-0"
-                initial={{ boxShadow: '0 0 0px rgba(255, 255, 255, 0)' }}
-                animate={isWebOpenAnimating ? {
-                  boxShadow: [
-                    '0 0 0px rgba(255, 255, 255, 0)',
-                    '0 0 20px rgba(255, 255, 255, 0.4)',
-                    '0 0 0px rgba(255, 255, 255, 0)'
-                  ]
-                } : {}}
-                transition={isWebOpenAnimating ? {
-                  duration: 2.5,
-                  repeat: Infinity,
-                  delay: 1.5
-                } : {}}
               >
                 <motion.div
                   animate={{
