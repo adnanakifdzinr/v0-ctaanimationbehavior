@@ -172,9 +172,10 @@ export function Footer() {
                       <motion.div
                         animate={{
                           x: hoveredCta === 'call' ? 30 : 0,
-                          opacity: hoveredCta === 'call' ? 0 : 1
+                          opacity: hoveredCta === 'call' ? 0 : 1,
+                          rotate: hoveredCta === 'call' ? 45 : 0
                         }}
-                        transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
+                        transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                         className="absolute"
                       >
                         <ArrowRight className="w-6 h-6 text-[#ff3a09]" strokeWidth={2} />
@@ -182,9 +183,10 @@ export function Footer() {
                       <motion.div
                         animate={{
                           x: hoveredCta === 'call' ? 0 : -30,
-                          opacity: hoveredCta === 'call' ? 1 : 0
+                          opacity: hoveredCta === 'call' ? 1 : 0,
+                          rotate: hoveredCta === 'call' ? -45 : 0
                         }}
-                        transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
+                        transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                         className="absolute"
                       >
                         <ArrowRight className="w-6 h-6 text-[#ff3a09]" strokeWidth={2} />
@@ -219,9 +221,10 @@ export function Footer() {
                       <motion.div
                         animate={{
                           x: hoveredCta === 'email' ? 30 : 0,
-                          opacity: hoveredCta === 'email' ? 0 : 1
+                          opacity: hoveredCta === 'email' ? 0 : 1,
+                          rotate: hoveredCta === 'email' ? 45 : 0
                         }}
-                        transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
+                        transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                         className="absolute"
                       >
                         <ArrowRight className="w-6 h-6 text-[#ff3a09]" strokeWidth={2} />
@@ -229,9 +232,10 @@ export function Footer() {
                       <motion.div
                         animate={{
                           x: hoveredCta === 'email' ? 0 : -30,
-                          opacity: hoveredCta === 'email' ? 1 : 0
+                          opacity: hoveredCta === 'email' ? 1 : 0,
+                          rotate: hoveredCta === 'email' ? -45 : 0
                         }}
-                        transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
+                        transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                         className="absolute"
                       >
                         <ArrowRight className="w-6 h-6 text-[#ff3a09]" strokeWidth={2} />
