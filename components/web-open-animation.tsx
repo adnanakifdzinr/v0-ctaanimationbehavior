@@ -11,7 +11,7 @@ export function WebOpenAnimation() {
   const [isHovering, setIsHovering] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const isMobile = useIsMobile();
-  const { setIsWebOpenAnimating } = useWebOpenAnimation();
+  const { isWebOpenAnimating, setIsWebOpenAnimating } = useWebOpenAnimation();
   const { setStartTypewriterAnimation } = useTypewriterTrigger();
 
   const handleEnter = () => {
