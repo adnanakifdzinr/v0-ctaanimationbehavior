@@ -15,6 +15,7 @@ interface ContactPopupProps {
 
 export function ContactPopup({ isOpen, onClose }: ContactPopupProps) {
   const [isClosing, setIsClosing] = useState(false)
+  const [isContentReady, setIsContentReady] = useState(false)
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -37,6 +38,14 @@ export function ContactPopup({ isOpen, onClose }: ContactPopupProps) {
       return () => clearTimeout(timer)
     }
   }, [showSuccess])
+
+  useEffect(() => {
+    if (isOpen && !isClosing) {
+      setIsContentReady(true)
+    } else {
+      setIsContentReady(false)
+    }
+  }, [isOpen, isClosing])
 
   const handleClose = () => {
     setIsClosing(true)
