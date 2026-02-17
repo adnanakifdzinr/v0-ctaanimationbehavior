@@ -28,7 +28,9 @@ export function Footer() {
   const [showSuccess, setShowSuccess] = useState(false)
   const [hoveredCta, setHoveredCta] = useState<string | null>(null)
   const [ctasInView, setCtasInView] = useState(false)
+  const [formInView, setFormInView] = useState(false)
   const ctaContainerRef = useRef<HTMLDivElement>(null)
+  const formContainerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     if (showSuccess) {
@@ -61,6 +63,29 @@ export function Footer() {
       }
     }
   }, [ctasInView])
+
+  useEffect(() => {
+    if (formInView) return
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setFormInView(true)
+        }
+      },
+      { threshold: 0.2 }
+    )
+
+    if (formContainerRef.current) {
+      observer.observe(formContainerRef.current)
+    }
+
+    return () => {
+      if (formContainerRef.current) {
+        observer.unobserve(formContainerRef.current)
+      }
+    }
+  }, [formInView])
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
@@ -247,68 +272,110 @@ export function Footer() {
             </div>
 
             {/* Right Column - Contact Form */}
-            <div>
+            <div ref={formContainerRef}>
               {showSuccess && (
-                <div className="mb-4 bg-[#0dce8d] text-black px-4 py-3 rounded-lg font-medium">
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  className="mb-4 bg-[#0dce8d] text-black px-4 py-3 rounded-lg font-medium"
+                >
                   Message sent successfully! We'll get back to you soon.
-                </div>
+                </motion.div>
               )}
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Contact Us Title */}
-                <div>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={formInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                  transition={{ duration: 0.6, delay: 0, ease: [0.33, 1, 0.68, 1] }}
+                >
                   <h3 className="text-[36px] font-medium text-white tracking-tight mb-6">
                     Contact Us
                   </h3>
-                </div>
+                </motion.div>
 
                 {/* Name and Email - Side by Side */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-                  <Input
-                    type="text"
-                    name="name"
-                    placeholder="Name *"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full h-auto bg-transparent text-white border-0 border-b border-white rounded-none focus-visible:ring-0 focus-visible:border-white placeholder-white py-2 focus-visible:bg-transparent"
-                  />
-                  <Input
-                    type="email"
-                    name="email"
-                    placeholder="Email *"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full h-auto bg-transparent text-white border-0 border-b border-white rounded-none focus-visible:ring-0 focus-visible:border-white placeholder-white py-2 focus-visible:bg-transparent"
-                  />
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={formInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                    transition={{ duration: 0.6, delay: 0.1, ease: [0.33, 1, 0.68, 1] }}
+                  >
+                    <Input
+                      type="text"
+                      name="name"
+                      placeholder="Name *"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full h-auto bg-transparent text-white border-0 border-b border-white rounded-none focus-visible:ring-0 focus-visible:border-white placeholder-white/90 py-2 focus-visible:bg-transparent"
+                    />
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={formInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                    transition={{ duration: 0.6, delay: 0.15, ease: [0.33, 1, 0.68, 1] }}
+                  >
+                    <Input
+                      type="email"
+                      name="email"
+                      placeholder="Email *"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full h-auto bg-transparent text-white border-0 border-b border-white rounded-none focus-visible:ring-0 focus-visible:border-white placeholder-white/90 py-2 focus-visible:bg-transparent"
+                    />
+                  </motion.div>
                 </div>
 
                 {/* Location and Company - Side by Side */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-                  <Input
-                    type="text"
-                    name="location"
-                    placeholder="Location"
-                    value={formData.location}
-                    onChange={handleInputChange}
-                    className="w-full h-auto bg-transparent text-white border-0 border-b border-white rounded-none focus-visible:ring-0 focus-visible:border-white placeholder-white py-2 focus-visible:bg-transparent"
-                  />
-                  <Input
-                    type="text"
-                    name="company"
-                    placeholder="Company Name"
-                    value={formData.company}
-                    onChange={handleInputChange}
-                    className="w-full h-auto bg-transparent text-white border-0 border-b border-white rounded-none focus-visible:ring-0 focus-visible:border-white placeholder-white py-2 focus-visible:bg-transparent"
-                  />
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={formInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                    transition={{ duration: 0.6, delay: 0.2, ease: [0.33, 1, 0.68, 1] }}
+                  >
+                    <Input
+                      type="text"
+                      name="location"
+                      placeholder="Location"
+                      value={formData.location}
+                      onChange={handleInputChange}
+                      className="w-full h-auto bg-transparent text-white border-0 border-b border-white rounded-none focus-visible:ring-0 focus-visible:border-white placeholder-white/90 py-2 focus-visible:bg-transparent"
+                    />
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={formInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                    transition={{ duration: 0.6, delay: 0.25, ease: [0.33, 1, 0.68, 1] }}
+                  >
+                    <Input
+                      type="text"
+                      name="company"
+                      placeholder="Company Name"
+                      value={formData.company}
+                      onChange={handleInputChange}
+                      className="w-full h-auto bg-transparent text-white border-0 border-b border-white rounded-none focus-visible:ring-0 focus-visible:border-white placeholder-white/90 py-2 focus-visible:bg-transparent"
+                    />
+                  </motion.div>
                 </div>
 
                 {/* Services Checkboxes */}
-                <div>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={formInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                  transition={{ duration: 0.6, delay: 0.3, ease: [0.33, 1, 0.68, 1] }}
+                >
                   <p className="text-white font-medium mb-4">What do you want our help with? *</p>
                   <div className="space-y-3">
-                    <label className="flex items-center space-x-3 cursor-pointer">
+                    <motion.label
+                      className="flex items-center space-x-3 cursor-pointer"
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={formInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }}
+                      transition={{ duration: 0.5, delay: 0.35, ease: [0.33, 1, 0.68, 1] }}
+                    >
                       <input
                         type="checkbox"
                         checked={formData.services.logoDesign}
@@ -316,8 +383,13 @@ export function Footer() {
                         className="w-5 h-5 rounded bg-white/20 border border-white/50 cursor-pointer accent-white"
                       />
                       <span className="text-white">Brand Strategy</span>
-                    </label>
-                    <label className="flex items-center space-x-3 cursor-pointer">
+                    </motion.label>
+                    <motion.label
+                      className="flex items-center space-x-3 cursor-pointer"
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={formInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }}
+                      transition={{ duration: 0.5, delay: 0.4, ease: [0.33, 1, 0.68, 1] }}
+                    >
                       <input
                         type="checkbox"
                         checked={formData.services.brandIdentity}
@@ -325,8 +397,13 @@ export function Footer() {
                         className="w-5 h-5 rounded bg-white/20 border border-white/50 cursor-pointer accent-white"
                       />
                       <span className="text-white">Brand Identity</span>
-                    </label>
-                    <label className="flex items-center space-x-3 cursor-pointer">
+                    </motion.label>
+                    <motion.label
+                      className="flex items-center space-x-3 cursor-pointer"
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={formInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }}
+                      transition={{ duration: 0.5, delay: 0.45, ease: [0.33, 1, 0.68, 1] }}
+                    >
                       <input
                         type="checkbox"
                         checked={formData.services.brandIdentity}
@@ -334,30 +411,40 @@ export function Footer() {
                         className="w-5 h-5 rounded bg-white/20 border border-white/50 cursor-pointer accent-white"
                       />
                       <span className="text-white">Visual Identity Systems</span>
-                    </label>
+                    </motion.label>
                   </div>
-                </div>
+                </motion.div>
 
                 {/* Project Message */}
-                <div>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={formInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                  transition={{ duration: 0.6, delay: 0.5, ease: [0.33, 1, 0.68, 1] }}
+                >
                   <p className="text-white font-medium mb-3">Tell us about your project *</p>
                   <Textarea
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
                     required
-                    className="w-full h-20 text-white border-0 border-b border-white rounded-none focus-visible:ring-0 focus-visible:border-white placeholder-white py-2 focus-visible:bg-transparent resize-none"
+                    className="w-full h-20 text-white border-0 border-b border-white rounded-none focus-visible:ring-0 focus-visible:border-white placeholder-white/90 py-2 focus-visible:bg-transparent resize-none"
                     placeholder="Your message..."
                   />
-                </div>
+                </motion.div>
 
                 {/* Submit Button */}
-                <Button
-                  type="submit"
-                  className="w-full bg-transparent text-white font-medium py-4 text-base md:text-lg border-0 border-b border-white rounded-none hover:bg-transparent"
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={formInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                  transition={{ duration: 0.6, delay: 0.55, ease: [0.33, 1, 0.68, 1] }}
                 >
-                  Submit Message
-                </Button>
+                  <Button
+                    type="submit"
+                    className="w-full bg-transparent text-white font-medium py-4 text-base md:text-lg border-0 border-b border-white rounded-none hover:bg-transparent"
+                  >
+                    Submit Message
+                  </Button>
+                </motion.div>
               </form>
             </div>
           </div>
