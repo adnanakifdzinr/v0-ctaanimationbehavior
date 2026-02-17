@@ -27,6 +27,14 @@ export function WebOpenAnimation() {
     return () => clearTimeout(timer);
   }, []);
 
+  const handleHoverStart = () => {
+    setIsHovering(true);
+  };
+
+  const handleHoverEnd = () => {
+    setIsHovering(false);
+  };
+
   // Responsive sizing - same size for mobile and desktop
   const buttonWidth = '56px';
   const expandedWidth = '200px';
@@ -188,11 +196,10 @@ export function WebOpenAnimation() {
               animate={isVisible ? "expanded" : "collapsed"}
               exit="exit"
               variants={buttonVariants}
-              onHoverStart={() => setIsHovering(true)}
-              onHoverEnd={() => setIsHovering(false)}
+              onHoverStart={handleHoverStart}
+              onHoverEnd={handleHoverEnd}
               onClick={handleEnter}
-              className={`relative ${buttonHeight} bg-white/5 backdrop-blur-sm border-l-2 border-r-2 border-white rounded-full flex items-center justify-between px-2 py-2 ${gap} overflow-hidden cursor-pointer focus:outline-none`}
-              whileHover={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }}
+              className={`relative ${buttonHeight} bg-white/5 backdrop-blur-sm border-l-2 border-r-2 border-white rounded-full flex items-center justify-between px-2 py-2 ${gap} overflow-hidden cursor-pointer focus:outline-none transition-colors duration-300 hover:bg-white/10`}
             >
               {/* Left text - reveals with character-level 3D flip */}
               <motion.span
@@ -232,9 +239,9 @@ export function WebOpenAnimation() {
               >
                 <motion.div
                   animate={{
-                    x: isCtaHovering ? 40 : 0,
-                    opacity: isCtaHovering ? 0 : 1,
-                    rotate: isCtaHovering ? 45 : 0
+                    x: isHovering ? 40 : 0,
+                    opacity: isHovering ? 0 : 1,
+                    rotate: isHovering ? 45 : 0
                   }}
                   transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                   className="absolute"
@@ -244,9 +251,9 @@ export function WebOpenAnimation() {
 
                 <motion.div
                   animate={{
-                    x: isCtaHovering ? 0 : -40,
-                    opacity: isCtaHovering ? 1 : 0,
-                    rotate: isCtaHovering ? -45 : 0
+                    x: isHovering ? 0 : -40,
+                    opacity: isHovering ? 1 : 0,
+                    rotate: isHovering ? -45 : 0
                   }}
                   transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                   className="absolute"
