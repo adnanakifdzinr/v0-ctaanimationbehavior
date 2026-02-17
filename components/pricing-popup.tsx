@@ -1,7 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import { X } from 'lucide-react'
+import { X, ArrowRight } from 'lucide-react'
+import { motion } from 'framer-motion'
 
 interface PricingPopupProps {
   isOpen: boolean
@@ -11,6 +12,7 @@ interface PricingPopupProps {
 
 export function PricingPopup({ isOpen, onClose, onGetStarted }: PricingPopupProps) {
   const [isClosing, setIsClosing] = useState(false)
+  const [hoveredButton, setHoveredButton] = useState<number | null>(null)
 
   const handleClose = () => {
     setIsClosing(true)
@@ -221,7 +223,7 @@ export function PricingPopup({ isOpen, onClose, onGetStarted }: PricingPopupProp
                 )}
 
                 {/* CTA Button */}
-                <button
+                <motion.button
                   onClick={() => {
                     handleClose()
                     if (onGetStarted) {
@@ -230,10 +232,76 @@ export function PricingPopup({ isOpen, onClose, onGetStarted }: PricingPopupProp
                       }, 400)
                     }
                   }}
-                  className="w-full text-center bg-white text-black px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-medium hover:bg-white/90 transition-colors duration-200 cursor-pointer text-xs sm:text-sm"
+                  onMouseEnter={() => setHoveredButton(index)}
+                  onMouseLeave={() => setHoveredButton(null)}
+                  initial={{ width: '100%' }}
+                  animate={{ width: '100%' }}
+                  transition={{ duration: 1.8, ease: 'easeInOut' }}
+                  className="w-full h-[44px] bg-white text-black px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-medium hover:bg-white/90 transition-colors duration-200 cursor-pointer text-xs sm:text-sm flex items-center justify-center gap-2 overflow-hidden relative focus:outline-none"
                 >
-                  Get Started
-                </button>
+                  <motion.span
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{
+                      staggerChildren: 0.05,
+                      delayChildren: 0.1,
+                      duration: 0.8
+                    }}
+                    className="text-black font-medium text-xs sm:text-sm whitespace-nowrap flex"
+                    style={{ perspective: 1200 }}
+                  >
+                    {'Get Started'.split('').map((char, charIndex) => (
+                      <motion.span
+                        key={charIndex}
+                        initial={{
+                          opacity: 0,
+                          rotateX: 90,
+                          rotateY: -45,
+                          y: 20,
+                          filter: 'blur(4px)'
+                        }}
+                        animate={{
+                          opacity: 1,
+                          rotateX: 0,
+                          rotateY: 0,
+                          y: 0,
+                          filter: 'blur(0px)'
+                        }}
+                        transition={{
+                          duration: 0.7,
+                          ease: [0.23, 1, 0.320, 1]
+                        }}
+                        style={{ perspective: 1200 }}
+                      >
+                        {char === ' ' ? '\u00A0' : char}
+                      </motion.span>
+                    ))}
+                  </motion.span>
+                  <div className="w-5 h-5 rounded-full bg-black text-white flex items-center justify-center overflow-hidden relative flex-shrink-0">
+                    <motion.div
+                      animate={{
+                        x: hoveredButton === index ? 20 : 0,
+                        opacity: hoveredButton === index ? 0 : 1,
+                        rotate: hoveredButton === index ? 45 : 0
+                      }}
+                      transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+                      className="absolute flex items-center justify-center"
+                    >
+                      <ArrowRight className="w-3 h-3" strokeWidth={2.5} />
+                    </motion.div>
+                    <motion.div
+                      animate={{
+                        x: hoveredButton === index ? 0 : -20,
+                        opacity: hoveredButton === index ? 1 : 0,
+                        rotate: hoveredButton === index ? -45 : 0
+                      }}
+                      transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+                      className="absolute flex items-center justify-center"
+                    >
+                      <ArrowRight className="w-3 h-3" strokeWidth={2.5} />
+                    </motion.div>
+                  </div>
+                </motion.button>
               </div>
             ))}
           </div>
